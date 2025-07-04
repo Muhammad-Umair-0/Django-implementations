@@ -98,3 +98,17 @@ rom members.models import Member
 <!-- to create the admin.py file -->
 
 python manage.py startapp myword
+
+<!-- to create super user -->
+python manage.py createsuperuser
+
+<!-- Include models to admin  -->
+add this code in 
+/memeber/admin.py
+
+from django.contrib import admin
+from .models import Members
+
+# Create your models here.
+admin.site.register(Members)
+# Register your models here.
