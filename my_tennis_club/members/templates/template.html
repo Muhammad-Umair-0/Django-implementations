@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
     <body>
+        {% include 'main.html'  %}
+        <h1>Welcome Everyone</h1>
+        {% comment "this was the original welcome message" %}
+        <h1>Welcome ladies and gentlemen</h1>
+        {% endcomment %}
         <!-- variable creation in html template -->
-        {% with firstname="MEri_Malik" %}
-        <h1>Hello {{ firstname }}, how are you?</h1>
+        {% with firstname="MEri_Tech" %}
+        <h1>Welcome to  {{ firstname }}</h1>
         {% endwith %}
 
         <h2>Fruits:</h2>
