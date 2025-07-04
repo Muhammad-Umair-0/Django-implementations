@@ -86,3 +86,15 @@ Members.objects.all().values()
 python manage.py makemigrations members
 after select option 2 
 rerun   -->  python manage.py migrate
+
+<!-- adding the new values -->
+python manage.py shell
+rom members.models import Member
+>>> x = Member.objects.all()[0]
+>>> x.phone = 5551234
+>>> x.joined_date = '2022-01-05'
+>>> x.save()
+
+<!-- to create the admin.py file -->
+
+python manage.py startapp myword
