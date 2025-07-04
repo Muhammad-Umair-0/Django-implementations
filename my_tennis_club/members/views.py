@@ -42,3 +42,12 @@ def meri_tech(request):
     'partner': ['Rao','Umair']
   }
   return HttpResponse(template.render(context, request))
+
+
+def test(request):
+  data = Members.objects.all()
+  template = loader.get_template('test.html')
+  context = {
+    'mymembers' :data
+  }
+  return HttpResponse(template.render(context,request))
