@@ -25,14 +25,18 @@ def details(request, id):
   
 
 def testing(request):
+  mymember = Members.objects.all().values()
   template = loader.get_template('template.html')
   context = {
-    'firstname': "Umair",
+    'mymember': mymember,
+    # 'firstname': "Umair",
+
     'fruits': ['Apple', 'Banana', 'Cherry']
   }
   return HttpResponse(template.render(context, request))
 
 def meri_tech(request):
+
   template = loader.get_template('myfirst.html')
   context = {
     'partner': ['Rao','Umair']

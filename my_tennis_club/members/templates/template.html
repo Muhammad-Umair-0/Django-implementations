@@ -1,13 +1,31 @@
 <!DOCTYPE html>
-<thml>
+<html>
     <body>
-        <h1>Hello {{ firstname }} how are you? </h1>
-      {% for x in fruits%}
-            <h1>{{ x }}</h1>
-        {% endfor %}
+        <!-- variable creation in html template -->
+        {% with firstname="MEri_Malik" %}
+        <h1>Hello {{ firstname }}, how are you?</h1>
+        {% endwith %}
+
+        <h2>Fruits:</h2>
+        <ul>
+        {% if fruits %}
+            {% for fruit in fruits %}
+                <li>{{ fruit }}</li>
+            {% endfor %}
+        {% endif %}
+        </ul>
+
+        <h2>Members:</h2>
+        <ul>
+        {% if mymember %}
+            {% for member in mymember %}
+                <li>{{ member.firstname }} {{ member.lastname }}</li>
+            {% endfor %}
+        {% endif %}
+        </ul>
         
-        <p> In views.py you can check which fruit variables are </p>
+        <p>In views.py you can check which fruit variables are.</p>
     </body>
-</thml>
+</html>
 
 
