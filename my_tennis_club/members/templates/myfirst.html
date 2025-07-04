@@ -42,8 +42,14 @@
 <body>
     <div class="container">
         <h1>Hello! welcome to MEri_Tech</h1>
-        <h2>About US</h2>
-        <p><strong>Meri tech</strong> is a <strong>AI</strong> based technology company it provide AI driven solutions .</p>
+        <h2>our Partners</h2>
+        {% if partner %}
+            {% for x in partner %}
+                <h3>{{ x }}</h3>
+            {% endfor %}
+        {% else %}
+            <p>No partner to display.</p>
+        {% endif %}
     </div>
 </body>
 </html>
