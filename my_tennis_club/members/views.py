@@ -45,7 +45,7 @@ def meri_tech(request):
 
 
 def test(request):
-  data = Members.objects.all(),
+  data = Members.objects.all()
   # data = Members.objects.all().values,# to get all values
   # data = Members.objects.values_list('firstname'),# to get specific column
   # data = Members.objects.filter(fitstname='Rao').values(), #for specific Row
