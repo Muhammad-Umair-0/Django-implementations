@@ -35,7 +35,7 @@ def testing(request):
   }
   return HttpResponse(template.render(context, request))
 
-def meri_tech(request):
+def partner(request):
 
   template = loader.get_template('myfirst.html')
   context = {
